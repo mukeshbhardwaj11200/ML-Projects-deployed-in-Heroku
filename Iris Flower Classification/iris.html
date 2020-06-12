@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<title> Iris Flower Predictor </title>
+<style type="text/css">
+       body {
+                 background-image: url("/static/image/photo.jpeg");
+                 background-repeat: no-repeat;
+                 background-size: cover;
+      }
+       .login {
+                 margin: 0 auto;
+                 width: 210px;
+      }
+       .login input {
+                 height: 35px; 
+                 width:150px;
+                 margin-top: 10px;
+      }
+       .login h1 {
+                 display: inline-block;
+                 height:30px; 
+                 width:400px;
+                 margin-left:-60px;
+      }
+       .login button {
+                 height:30px; 
+                 width:70px;
+                 padding: 5px;
+                 margin-top:7px;
+                 margin-left:38px;
+      }
+       
+       
+       
+</style>
+</head>
+<body> 
+ <div class="login">
+  <h1> Iris Flower Predictor </h1>
+
+   <form action="{{url_for("predict")}}" method="post">  
+     <input type='text' placeholder="Enter Sepal Length" name='Enter Sepal Length' required='required' /> <br>
+     <input type='text' placeholder="Enter Sepal Width" name='Enter Sepal Width' required='required' /> <br>
+     <input type='text' placeholder="Enter Petal Length" name='Enter Petal Length' required='required' /> <br>
+     <input type='text' placeholder="Enter Petal Width" name='Enter Petal Width' required='required' /> <br>
+     
+      <button  type="submit" value='submit'> Predict </button>
+          
+</form>
+
+   
+   <br>
+   <br>
+   {{ prediction_text }}
+ 
+ </div>
+
+</body>
+</html>
